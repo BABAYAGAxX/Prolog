@@ -1,6 +1,8 @@
 'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/UI/dropdown-menu"
+import { ChevronDown } from 'lucide-react'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,33 +50,31 @@ const Header = () => {
             </Link>
 
             {/* Services Dropdown */}
-            <div className="relative group">
-              <button className="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-md font-medium transition duration-300 ease-in-out">
-                Services
-              </button>
-              <div className="absolute hidden group-hover:flex group-hover:block bg-white shadow-lg rounded-md mt-2 w-48">
-                <div className="py-1" onMouseLeave={() => setIsOpen(false)}>
-                  <Link href="/healthcare-system" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">
-                    Healthcare System
-                  </Link>
-                  <Link href="/hospitals" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">
-                    Hospitals
-                  </Link>
-                  <Link href="/nursing-home" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">
-                    Nursing Home
-                  </Link>
-                  <Link href="/emergency-rooms" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">
-                    Emergency Rooms
-                  </Link>
-                  <Link href="/private-practices" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">
-                    Private Practices
-                  </Link>
-                  <Link href="/all-specialties" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-300 ease-in-out">
-                    All Specialties
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-md font-medium transition duration-300 ease-in-out flex items-center">
+                Services <ChevronDown className="ml-1 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem>
+                  <Link href="/healthcare-system" className="w-full">Healthcare System</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/hospitals" className="w-full">Hospitals</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/nursing-home" className="w-full">Nursing Home</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/emergency-rooms" className="w-full">Emergency Rooms</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/private-practices" className="w-full">Private Practices</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/all-specialties" className="w-full">All Specialties</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             <Link href="/why-choose-us" className="text-gray-700 hover:text-blue-500 px-3 py-2 rounded-md text-md font-medium transition duration-300 ease-in-out">
               Why Choose Us
@@ -96,9 +96,31 @@ const Header = () => {
             <Link href="/about" className="text-gray-700 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium">
               About
             </Link>
-            <Link href="/services" className="text-gray-700 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium">
-              Services
-            </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-gray-700 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between">
+                Services <ChevronDown className="ml-1 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem>
+                  <Link href="/healthcare-system" className="w-full">Healthcare System</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/hospitals" className="w-full">Hospitals</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/nursing-home" className="w-full">Nursing Home</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/emergency-rooms" className="w-full">Emergency Rooms</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/private-practices" className="w-full">Private Practices</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/all-specialties" className="w-full">All Specialties</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Link href="/why-choose-us" className="text-gray-700 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium">
               Why Choose Us
             </Link>
