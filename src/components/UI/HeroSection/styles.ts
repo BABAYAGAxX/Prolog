@@ -1,9 +1,7 @@
 'use client';
 import { styled } from 'styled-components';
-// import hero_background from '../../../../public/images/grid_background.png';
 
 export const Wrapper = styled.section`
-  
   background-color: #cbd5e1;
 `;
 
@@ -11,7 +9,6 @@ export const Inner = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* max-width: 56rem; */
   margin: 0 auto;
   text-align: center;
   background-position: top center;
@@ -32,32 +29,30 @@ export const Pill = styled.div`
   margin-bottom: 1rem;
 
   span {
-    color: var(--light-gray);
+    color: black; /* Changed to black */
     font-size: 1rem;
     font-weight: 400;
   }
 `;
 
-
 export const HeroContainer = styled.div`
-    display: grid;
-    width: 90%;
-    grid-template-columns: 2fr 1fr;
-    text-align: start;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem; 
-   `;
+  display: grid;
+  width: 90%;
+  grid-template-columns: 2fr 1fr;
+  text-align: start;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; 
+`;
 
 export const HeroContainerMobile = styled.div`
-    display: flex;
-    width: 90%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem; 
-   `;
-
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; 
+`;
 
 export const HeroTextContainer = styled.div`
   display: flex;
@@ -65,19 +60,18 @@ export const HeroTextContainer = styled.div`
   gap: 1.5rem;
   padding-bottom: 2rem;
   text-align: start;
-  
 
   h1 {
     font-size: 3.5rem;
     font-weight: 400;
     line-height: 4rem;
     letter-spacing: -0.1rem;
-    color: var(--green);
+    color: black; /* Changed to black */
   }
 
   p {
     max-width: 41.75rem;
-    color: #A0A0A0;
+    color: black; /* Changed to black */
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 2rem;
