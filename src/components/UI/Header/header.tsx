@@ -27,7 +27,7 @@ const Header = () => {
         <div className="flex justify-between h-16">
           {/* Business Name */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-xl font-bold text-muted-foreground">
+            <Link href="/" className="text-2xl font-bold text-muted-foreground">
               Prolog Billing
             </Link>
           </div>
