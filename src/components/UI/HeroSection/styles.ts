@@ -29,7 +29,7 @@ export const Pill = styled.div`
   margin-bottom: 1rem;
 
   span {
-    color: black; /* Changed to black */
+    color: #000000;
     font-size: 1rem;
     font-weight: 400;
   }
@@ -42,7 +42,7 @@ export const HeroContainer = styled.div`
   text-align: start;
   align-items: center;
   justify-content: center;
-  gap: 1rem; 
+  gap: 1rem;
 `;
 
 export const HeroContainerMobile = styled.div`
@@ -51,7 +51,7 @@ export const HeroContainerMobile = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem; 
+  gap: 1rem;
 `;
 
 export const HeroTextContainer = styled.div`
@@ -66,12 +66,12 @@ export const HeroTextContainer = styled.div`
     font-weight: 400;
     line-height: 4rem;
     letter-spacing: -0.1rem;
-    color: black; /* Changed to black */
+    color: #000000; /*Black */
   }
 
   p {
     max-width: 41.75rem;
-    color: black; /* Changed to black */
+    color: #6b6b6b; /*muted text color */
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 2rem;

@@ -1,83 +1,63 @@
 'use client';
-import Image from 'next/image';
-import ic_import from '../../../../public/svgs/ic_import.svg';
-
-import { Wrapper, Inner, SecondOverlay } from './styles';
-import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
+import { Loader2 } from "lucide-react";
+import styled from 'styled-components';
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+
+const Wrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+`;
 
 const Preloader = ({
   setComplete,
 }: {
   setComplete: Dispatch<SetStateAction<boolean>>;
 }) => {
-  const word = ['P', 'R', 'O', 'L', 'O', 'G'];
-
-  const spans = useRef<any>([]); // Create a ref to store the span elements
-  const imageRef = useRef(null);
-  const secondOverlayRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(true);
   const wrapperRef = useRef(null);
+  const spinnerRef = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline();
-    tl.to(imageRef.current, {
-      rotate: '360deg',
-      ease: 'back.out(1.7)', // Easing function
-      duration: 1.4,
+
+    // Fade in the spinner
+    tl.to(spinnerRef.current, {
+      opacity: 1,
+      duration: 0.5,
     });
-    tl.to(imageRef.current, {
-      y: '-100%', // Move the spans up
-      ease: 'back.out(1.7)', // Easing function
-    });
-    // Iterate through the span elements and animate them
-    tl.to(spans.current, {
-      y: '-100%', // Move the spans up
-      ease: 'back.out(1.7)', // Easing function
-      duration: 1.4, // Animation duration
-      stagger: 0.05, // Stagger duration (0.2 seconds delay between each span)
-    });
-    // Animate both the wrapper and the second overlay almost at the same time
-    tl.to([wrapperRef.current, secondOverlayRef.current], {
-      scaleY: 0,
-      transformOrigin: 'top',
-      ease: 'back.out(1.7)',
-      duration: 1,
-      stagger: 0.2,
+
+    // After a delay, fade out the spinner and the wrapper
+    tl.to([spinnerRef.current, wrapperRef.current], {
+      opacity: 0,
+      duration: 0.5,
+      delay: 2, // Adjust this delay as needed
       onComplete: () => {
         setComplete(true);
+        setIsVisible(false);
       },
     });
 
-    // Apply a small delay to one of the elements (adjust as needed)
-    tl.to(secondOverlayRef.current, {
-      scaleY: 0,
-      transformOrigin: 'top',
-      ease: [0.83, 0, 0.17, 1] as any,
-      duration: 1,
-      delay: -0.9, // Adjust this delay as needed to fine-tune the timing
-    });
   }, [setComplete]);
 
+  if (!isVisible) {
+    return null;
+  }
+
   return (
-    <>
-      <Wrapper ref={wrapperRef}>
-        <Inner>
-          <Image ref={imageRef} src={ic_import} alt="import icon" />
-          <div>
-            {word.map((t, i) => (
-              <div
-                key={i}
-                ref={(element) => (spans.current[i] = element)} // Assign ref to each span
-                className={t === 'P' || t === 'R' || t === 'O' || t === 'L' || t === 'G' ? 'special-font' : ''}
-              >
-                {t}
-              </div>
-            ))}
-          </div>
-        </Inner>
-      </Wrapper>
-      <SecondOverlay ref={secondOverlayRef}></SecondOverlay>
-    </>
+    <Wrapper ref={wrapperRef}>
+      <div ref={spinnerRef} className="flex items-center justify-center">
+        <Loader2 className="w-12 h-12 text-blue-500 animate-spin" />
+      </div>
+    </Wrapper>
   );
 };
 
