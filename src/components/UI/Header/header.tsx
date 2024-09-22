@@ -75,7 +75,7 @@ const Header = () => {
             <Link href="/why-choose-us" className="text-muted-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">
               Why Choose Us
             </Link>
-            <Link href="/contact" className="text-muted-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">
+            <Link href="/contact-us" className="text-muted-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">
               Contact Us
             </Link>
           </div>

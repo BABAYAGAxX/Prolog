@@ -66,12 +66,12 @@ export const HeroTextContainer = styled.div`
     font-weight: 400;
     line-height: 4rem;
     letter-spacing: -0.1rem;
-    color: #000000; /* Keeping this black */
+    color: #000000; /*Black */
   }
 
   p {
     max-width: 41.75rem;
-    color: #6b6b6b; /* Tailwind's muted text color */
+    color: #6b6b6b; /*muted text color */
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 2rem;

@@ -1,7 +1,7 @@
 'use client';
 import { Loader2 } from "lucide-react";
 import styled from 'styled-components';
-import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 const Wrapper = styled.div`
@@ -22,6 +22,7 @@ const Preloader = ({
 }: {
   setComplete: Dispatch<SetStateAction<boolean>>;
 }) => {
+  const [isVisible, setIsVisible] = useState(true);
   const wrapperRef = useRef(null);
   const spinnerRef = useRef(null);
 
@@ -41,10 +42,15 @@ const Preloader = ({
       delay: 2, // Adjust this delay as needed
       onComplete: () => {
         setComplete(true);
+        setIsVisible(false);
       },
     });
 
   }, [setComplete]);
+
+  if (!isVisible) {
+    return null;
+  }
 
   return (
     <Wrapper ref={wrapperRef}>
