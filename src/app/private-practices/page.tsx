@@ -29,7 +29,7 @@ const PrivatePractices: React.FC = () => {
       </Paragraph>
 
       <Paragraph>
-        PM Billing keeps you updated on the latest coding practices and compliance requirements. Incorrect coding can lead to lost revenue, but with our expertise, you'll be informed of the most effective codes and best practices to optimize your revenue.
+        PM Billing keeps you updated on the latest coding practices and compliance requirements. Incorrect coding can lead to lost revenue, but with our expertise, you&apos;ll be informed of the most effective codes and best practices to optimize your revenue.
       </Paragraph>
 
       <Paragraph>
@@ -39,7 +39,7 @@ const PrivatePractices: React.FC = () => {
       <SubHeading>Contact PM Billing for Private Practice Billing</SubHeading>
 
       <Paragraph>
-        Switching to PM Billing offers numerous advantages. Our strong industry relationships and unmatched service quality in medical billing can help you boost cash flow and improve patient flow. Let us streamline your billing processes and provide the insights you need to enhance your practice's financial health.
+        Switching to PM Billing offers numerous advantages. Our strong industry relationships and unmatched service quality in medical billing can help you boost cash flow and improve patient flow. Let us streamline your billing processes and provide the insights you need to enhance your practice&apos;s financial health.
       </Paragraph>
     </PageContainer>
   );

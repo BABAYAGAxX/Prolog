@@ -20,7 +20,7 @@ export default function WhyChoosePMBilling() {
         <ListItem><Card>Payment posting and adjustments for refunds to improve cash flow.</Card></ListItem>
         <ListItem><Card>A dedicated account manager for all your requirements.</Card></ListItem>
         <ListItem><Card>Provide high-quality, error-free billing and collection services.</Card></ListItem>
-        <ListItem><Card>We consistently increase our clients' collection ratios through a faster accounts receivable process and timely follow-up.</Card></ListItem>
+        <ListItem><Card>We consistently increase our clients&apos; collection ratios through a faster accounts receivable process and timely follow-up.</Card></ListItem>
         <ListItem><Card>Use the latest technology and tools.</Card></ListItem>
         <ListItem><Card>Offer services that can be easily scaled at any time.</Card></ListItem>
       </List>

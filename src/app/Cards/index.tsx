@@ -12,7 +12,7 @@ import {
   Stat,
   Banner,
 } from './styles';
-import MaskText from '@/components_old/MaskText';
+import { MaskText } from '@/components';
 import { useIsDesktop } from '@/lib/hooks';
 import {
   cardsInfo,
