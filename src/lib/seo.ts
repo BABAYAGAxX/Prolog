@@ -2,9 +2,9 @@ import { env } from "@/env";
 import { Metadata } from "next";
 
 const siteConfig = {
-  defaultTitle: "Sprint Launch",
+  defaultTitle: "PM Billing",
   defaultDescription:
-    "A Next.js starter template for launching your next project.",
+    "PM Billing Website",
   baseUrl: env.NEXT_PUBLIC_SITE_URL,
 };
 
@@ -17,7 +17,7 @@ export default function getMetadata(overrides: Partial<Metadata>): Metadata {
     metadataBase: new URL(siteConfig.baseUrl),
     title: {
       default: siteConfig.defaultTitle,
-      template: "%s | Sprint Launch",
+      template: "%s | PM Billing",
     },
     description: siteConfig.defaultDescription,
     icons: {
