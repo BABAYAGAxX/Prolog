@@ -49,49 +49,23 @@ export const FooterMiddle = styled.div`
     gap: 3.5rem;
   }
 `;
-
-export const QRContainer = styled.div`
-  display: flex;
-  gap: 0.75rem;
-  padding: 1.25rem 1rem;
-  gap: 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px dashed var(--White, #fff);
-`;
-
-export const QRImageCtn = styled.div``;
-
-export const TextCtn = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  p {
-    max-width: 19.5625rem;
-    font-size: 1.25rem;
-    font-weight: 400;
-  }
+export const ImageContainer = styled.div`
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1rem;
 
   @media (max-width: 768px) {
-    p {
-      font-size: 1rem;
-    }
+    max-width: 100%;
   }
-`;
-
-export const IconCtn = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
 `;
 
 export const FooterNavigation = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem 3.75rem;
+    align-items: flex-start;
   }
 `;
 
@@ -100,11 +74,12 @@ export const GridColumn = styled.div`
   min-width: 12.5rem;
   width: 100%;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 1rem;
 
   @media (max-width: 768px) {
     min-width: auto;
+    align-items: flex-start;
   }
 `;
 
@@ -112,6 +87,7 @@ export const LinksContainer = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 0.75rem;
 
   li {
@@ -120,6 +96,11 @@ export const LinksContainer = styled.ul`
     font-weight: 400;
     cursor: pointer;
     position: relative;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     &::after {
       position: absolute;
@@ -140,6 +121,10 @@ export const LinksContainer = styled.ul`
         transform: scaleX(1);
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
   }
 `;
 
