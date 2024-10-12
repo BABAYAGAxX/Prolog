@@ -1,21 +1,27 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import raft_footer_logo from '../../../../public/svgs/raft_footer_logo.svg';
-import ic_chevron_down from '../../../../public/svgs/ic_chevron_down.svg';
-import ic_copyright from '../../../../public/svgs/ic_copyright.svg';
-import PM_Billing from '../../../../public/images/PM-Logo.jpeg';
 
 const linksArr = [
   {
     title: 'About us',
     links: ['Contact us', 'Phone Number', 'Email'],
   },
+  {
+    title: 'Services',
+    links: [
+      { name: 'Healthcare Systems', href: '/services/healthcare-systems' },
+      { name: 'Hospitals', href: '/services/hospitals' },
+      { name: 'Nursing Home', href: '/services/nursing-home' },
+      { name: 'Emergency Rooms', href: '/services/emergency-rooms' },
+      { name: 'Private Practices', href: '/services/private-practices' },
+      { name: 'All Specialties', href: '/services/all-specialties' },
+    ],
+  },
 ];
 
 import {
   Wrapper,
   Inner,
-  FooterLogo,
   FooterMainContent,
   FooterMiddle,
   ImageContainer,
@@ -31,22 +37,21 @@ const Footer = () => {
   return (
     <Wrapper>
       <Inner>
-        <FooterLogo>
-          <Image src={raft_footer_logo} alt="raft_footer_logo" />
-        </FooterLogo>
         <FooterMainContent>
           <FooterMiddle>
             <ImageContainer>
-            <Image src="/path/to/image.jpg" width={500} height={300} alt='PM BILLING LOGO'/>
+              <Image src="/images/PM-Footer.png" width={500} height={300} alt='PM BILLING LOGO'/>
             </ImageContainer>
             <FooterNavigation>
               {linksArr.map((l, i) => (
                 <GridColumn key={i}>
                   <h3>{l.title}</h3>
                   <LinksContainer>
-                    {l.links.map((link, i) => (
-                      <li key={i}>
-                        {link === 'About us' ? (
+                    {l.links.map((link, j) => (
+                      <li key={j}>
+                        {l.title === 'Services' ? (
+                          <Link href={link.href}>{link.name}</Link>
+                        ) : link === 'About us' ? (
                           <Link href="/about">{link}</Link>
                         ) : (
                           link
@@ -61,10 +66,8 @@ const Footer = () => {
           <FooterBottom>
             <Translator>
               <h3>English (United States)</h3>
-              <Image src={ic_chevron_down} alt="chevron down" />
             </Translator>
             <CopyRight>
-              <Image src={ic_copyright} alt="copyright svg" />
               PM Billing.
             </CopyRight>
           </FooterBottom>

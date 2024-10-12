@@ -19,25 +19,3 @@
   .glow {
     text-shadow: 0 0 5px rgba(0, 150, 255, 0.5), 0 0 10px rgba(0, 150, 255, 0.5);
   }
-/* Header.css */
-.group {
-  position: relative;
-}
-
-.group .absolute {
-  pointer-events: none;
-}
-
-.group-hover\:scale-x-100 {
-  transform: scaleX(1);
-}
-
-.group-hover\:opacity-70 {
-  opacity: 0.7;
-}
-
-/* Optional: Add a glow effect */
-.glow {
-  text-shadow: 0 0 5px rgba(0, 150, 255, 0.5), 0 0 10px rgba(0, 150, 255, 0.5);
-}
-    

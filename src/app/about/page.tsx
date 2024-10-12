@@ -21,7 +21,7 @@ const KeystoneFinancial: React.FC = () => {
         Our team of AAPC-certified coders and expert billers possess the knowledge and experience to provide your facility with precise and thorough work. Leveraging our extensive expertise, we communicate with your team and train them in best practices to boost your revenue.
       </Paragraph>
       <Paragraph>
-        With years of experience in the medical billing industry, we have established enduring relationships with both insurance companies and our clients. Our aim is to become a recognized name within the networks, allowing us to effectively advocate for our clients' needs and deliver outstanding results. Unlike other billing companies, our commitment to quality service remains unwavering over time.
+        With years of experience in the medical billing industry, we have established enduring relationships with both insurance companies and our clients. Our aim is to become a recognized name within the networks, allowing us to effectively advocate for our clients&apos; needs and deliver outstanding results. Unlike other billing companies, our commitment to quality service remains unwavering over time.
       </Paragraph>
 
       <SubHeading>PMB Vision</SubHeading>
@@ -46,7 +46,7 @@ const KeystoneFinancial: React.FC = () => {
 
       <SubHeading>Contact Us</SubHeading>
       <Paragraph>
-        Let us become an extension of your team. We can help you save time and increase revenue, enabling you to focus on delivering quality patient care. We take pride in supporting our clients' growth.
+        Let us become an extension of your team. We can help you save time and increase revenue, enabling you to focus on delivering quality patient care. We take pride in supporting our clients&apos; growth.
       </Paragraph>
       <ContactButton>Contact Us Today</ContactButton>
     </PageContainer>

@@ -4,6 +4,8 @@ import card_grid from '../../../../public/images/card_grid.png';
 
 export const Wrapper = styled.section`
   padding-top: 7.75rem;
+  padding-bottom: 3rem;
+  background-color: #000000;
 `;
 
 export const Inner = styled.div`
@@ -27,7 +29,7 @@ export const Header = styled.header`
   p {
     max-width: 41.75rem;
     color: var(--link-color);
-    font-size: 1.25rem;
+    font-size: 1.25rem; 
     font-weight: 400;
     line-height: 1.75rem;
   }
@@ -56,7 +58,7 @@ export const CardContainer = styled.div`
 `;
 
 export const Card = styled.div`
-  height: 41.875rem;
+  height: 23rem;
   border-radius: 0.75rem;
   border: 1px solid var(--stroke, rgba(255, 255, 255, 0.04));
   background: #131313;
@@ -157,35 +159,6 @@ export const Stat = styled.div`
 
     p {
       font-size: 0.75rem;
-    }
-  }
-`;
-
-// export const Number = styled.h1`
-//   font-size: 5rem;
-//   font-weight: 600;
-// `;
-
-// export const SubTitle = styled.p`
-//   color: var(--link-color);
-//   font-size: 1.125rem;
-//   font-weight: 500;
-//   text-transform: uppercase;
-// `;
-
-export const Banner = styled.div`
-  height: 45rem;
-  width: 100%;
-  position: relative;
-
-  img {
-    object-fit: cover;
-  }
-
-  @media (max-width: 768px) {
-    height: 31.25rem;
-    img {
-      object-fit: contain;
     }
   }
 `;

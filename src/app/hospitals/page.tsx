@@ -68,7 +68,7 @@ export default function Hospitals() {
 
       <SubHeading>Why Choose PM Billing for Hospital Billing Services</SubHeading>
       <Paragraph>
-        ProLog Medical Billing offers a comprehensive range of medical billing solutions tailored to your healthcare organization’s needs. We have experience working with various healthcare facilities, including:
+        Prolog Medical Billing offers a comprehensive range of medical billing solutions tailored to your healthcare organization’s needs. We have experience working with various healthcare facilities, including:
       </Paragraph>
 
       <List>

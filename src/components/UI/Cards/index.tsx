@@ -9,8 +9,7 @@ import {
   TextCtn,
   SVGCtn,
   Stats,
-  Stat,
-  Banner,
+  Stat
 } from './styles';
 import MaskText from '@/components/Common/MaskText';
 import { useIsDesktop } from '@/lib/hooks';
@@ -48,18 +47,10 @@ const Cards = () => {
                 <MaskText phrases={new Array(info.title)} tag="h3" />
                 <MaskText phrases={new Array(info.details)} tag="p" />
               </TextCtn>
-
             </Card>
           ))}
         </CardContainer>
       </Inner>
-      {/* <Banner>
-        {!isDesktop ? (
-          <Image src={future_mobile_banner} alt="future_banner" fill />
-        ) : (
-          <Image src={future_banner} alt="future_banner" fill />
-        )}
-      </Banner> */}
     </Wrapper>
   );
 };

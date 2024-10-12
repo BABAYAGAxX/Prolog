@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({ title, description, Icon, link }) => (
 const HealthcareCards: React.FC = () => {
   const cards: CardProps[] = [
     { title: 'Healthcare System', description: 'Comprehensive care management for all health needs.', Icon: icons['Healthcare System'], link: '/healthcare-system' },
-    { title: 'Hospitals', description: 'State-of-the-art facilities providing inpatient and outpatient care.', Icon: icons['Hospitals'], link: '/hospitals' },
+    { title: 'Hospitals', description: 'State-of-the-art facilities providing unparalleled care.', Icon: icons['Hospitals'], link: '/hospitals' },
     { title: 'Nursing Home', description: 'Long-term care with compassionate and professional staff.', Icon: icons['Nursing Home'], link: '/nursing-home' },
     { title: 'Emergency Rooms', description: '24/7 emergency services for urgent medical needs.', Icon: icons['Emergency Rooms'], link: '/emergency-rooms' },
     { title: 'Private Practices', description: 'Personalized care from specialized medical professionals.', Icon: icons['Private Practices'], link: '/private-practices' },

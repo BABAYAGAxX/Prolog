@@ -1,9 +1,13 @@
 'use client'
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/UI/dropdown-menu"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/UI/popover"
+import { DropdownMenuItem } from '@/components/UI/dropdown-menu';
 import { ChevronDown, Menu, X } from 'lucide-react'
 import { Button } from "@/components/UI/button"
+import logo from '../../public/images/PM-Footer.png'; // Adjust the path as needed
+import Footer from '../Footer';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,15 +29,21 @@ const Header = () => {
     <nav className="bg-muted shadow-lg relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          {/* Business Name */}
-          <div className="flex-shrink-0 flex items-center">
+          {/* Business Name and Logo */}
+          <div className="flex-shrink-0 flex gap-2 items-center">
+            <Image 
+              src= "/images/PM-Footer.png"
+              alt="PM Billing Logo" 
+              width={40} 
+              height={40} 
+            />
             <Link href="/" className="text-2xl font-bold text-muted-foreground">
-              Prolog Billing
+              PM Billing
             </Link>
           </div>
 
           {/* Menu Button for Mobile */}
-          <div className="flex md:hidden">
+          <div className="flex md:hidden items-center justify-center">
             <Button
               variant="ghost"
               size="icon"
@@ -46,7 +56,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-4 justify-center items-center relative">
+          <div className="hidden md:flex space-x-4 justify-center items-center">
             <Link href="/" className="text-muted-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">
               Home
             </Link>
@@ -55,22 +65,23 @@ const Header = () => {
             </Link>
 
             {/* Services Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
+            <Popover>
+              <PopoverTrigger asChild>
                 <Button variant="ghost" className="text-muted-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">
                   Services <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
+              </PopoverTrigger>
+              <PopoverContent align="start" className="w-56">
                 {serviceLinks.map((link) => (
-                  <DropdownMenuItem key={link.href}>
+                  <div className = "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                  key={link.href}>
                     <Link href={link.href} className="w-full">
                       {link.label}
                     </Link>
-                  </DropdownMenuItem>
+                  </div>
                 ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+              </PopoverContent>
+            </Popover>
 
             <Link href="/why-choose-us" className="text-muted-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">
               Why Choose Us

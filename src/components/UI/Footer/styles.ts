@@ -3,6 +3,7 @@ import { styled } from 'styled-components';
 
 export const Wrapper = styled.footer`
   padding-bottom: 3.5rem;
+  background-color: #000000;
 `;
 
 export const Inner = styled.main`
@@ -15,18 +16,6 @@ export const Inner = styled.main`
 
   @media (max-width: 768px) {
     gap: 2.5rem;
-  }
-`;
-
-export const FooterLogo = styled.div`
-  @media (max-width: 768px) {
-    width: 13.2rem;
-    height: 5.6rem;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
   }
 `;
 
@@ -49,6 +38,7 @@ export const FooterMiddle = styled.div`
     gap: 3.5rem;
   }
 `;
+
 export const ImageContainer = styled.div`
   width: 100%;
   max-width: 400px;
@@ -61,10 +51,11 @@ export const ImageContainer = styled.div`
 
 export const FooterNavigation = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 2rem;
 
   @media (max-width: 768px) {
+    flex-direction: column;
     align-items: flex-start;
   }
 `;
@@ -72,14 +63,17 @@ export const FooterNavigation = styled.div`
 export const GridColumn = styled.div`
   display: flex;
   min-width: 12.5rem;
-  width: 100%;
   flex-direction: column;
-  align-items: flex-end;
   gap: 1rem;
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
 
   @media (max-width: 768px) {
     min-width: auto;
-    align-items: flex-start;
   }
 `;
 
@@ -87,7 +81,6 @@ export const LinksContainer = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 0.75rem;
 
   li {
@@ -121,10 +114,6 @@ export const LinksContainer = styled.ul`
         transform: scaleX(1);
       }
     }
-  }
-
-  @media (max-width: 768px) {
-    align-items: flex-start;
   }
 `;
 
