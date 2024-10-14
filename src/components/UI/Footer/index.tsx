@@ -3,10 +3,6 @@ import Link from 'next/link';
 
 const linksArr = [
   {
-    title: 'About us',
-    links: ['Contact us', 'Phone Number', 'Email'],
-  },
-  {
     title: 'Services',
     links: [
       { name: 'Healthcare Systems', href: '/services/healthcare-systems' },
@@ -15,6 +11,14 @@ const linksArr = [
       { name: 'Emergency Rooms', href: '/services/emergency-rooms' },
       { name: 'Private Practices', href: '/services/private-practices' },
       { name: 'All Specialties', href: '/services/all-specialties' },
+    ],
+  },
+  {
+    title: 'About us',
+    links: [
+      {name: 'Contact us', href: '/contact-us'}, 
+      {name: 'Phone Number', href: 'tel:+1234567890'},
+      {name: 'Email', href: 'mailto:info@pmbilling.com'}
     ],
   },
 ];
@@ -49,12 +53,10 @@ const Footer = () => {
                   <LinksContainer>
                     {l.links.map((link, j) => (
                       <li key={j}>
-                        {l.title === 'Services' ? (
+                        {link.href ? (
                           <Link href={link.href}>{link.name}</Link>
-                        ) : link === 'About us' ? (
-                          <Link href="/about">{link}</Link>
                         ) : (
-                          link
+                          link.name
                         )}
                       </li>
                     ))}

@@ -3,11 +3,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/UI/popover"
-import { DropdownMenuItem } from '@/components/UI/dropdown-menu';
 import { ChevronDown, Menu, X } from 'lucide-react'
 import { Button } from "@/components/UI/button"
-import logo from '../../public/images/PM-Footer.png'; // Adjust the path as needed
-import Footer from '../Footer';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +29,7 @@ const Header = () => {
           {/* Business Name and Logo */}
           <div className="flex-shrink-0 flex gap-2 items-center">
             <Image 
-              src= "/images/PM-Footer.png"
+              src= "/images/PM-Billing-nbg.png"
               alt="PM Billing Logo" 
               width={40} 
               height={40} 
@@ -64,21 +61,22 @@ const Header = () => {
               About
             </Link>
 
-            {/* Services Dropdown */}
+            {/* Services Popover */}
             <Popover>
               <PopoverTrigger asChild>
                 <Button variant="ghost" className="text-muted-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">
                   Services <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
               </PopoverTrigger>
-              <PopoverContent align="start" className="w-56">
+              <PopoverContent align="start" className="w-56 p-2 bg-muted border border-muted-foreground/20 rounded-md shadow-lg">
                 {serviceLinks.map((link) => (
-                  <div className = "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
-                  key={link.href}>
-                    <Link href={link.href} className="w-full">
-                      {link.label}
-                    </Link>
-                  </div>
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-primary hover:bg-muted-foreground/10 transition duration-300 ease-in-out"
+                  >
+                    {link.label}
+                  </Link>
                 ))}
               </PopoverContent>
             </Popover>
