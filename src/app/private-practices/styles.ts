@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 // Global container
 export const PageContainer = styled.div`
-  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
@@ -10,7 +9,7 @@ export const PageContainer = styled.div`
   color: #333;
   background-color: #f5f7fa;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 0px;
 `;
 
 // Main title styling

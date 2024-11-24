@@ -48,7 +48,10 @@ const KeystoneFinancial: React.FC = () => {
       <Paragraph>
         Let us become an extension of your team. We can help you save time and increase revenue, enabling you to focus on delivering quality patient care. We take pride in supporting our clients&apos; growth.
       </Paragraph>
-      <ContactButton>Contact Us Today</ContactButton>
+      {/* Wrap the button with an <a> tag */}
+      <a href="mailto:PMbilling786@gmail.com">
+        <ContactButton>Contact Us Today</ContactButton>
+      </a>
     </PageContainer>
   );
 };

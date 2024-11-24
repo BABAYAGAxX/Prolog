@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 // Global container
 export const PageContainer = styled.div`
-  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
@@ -10,7 +9,7 @@ export const PageContainer = styled.div`
   color: #333;
   background-color: #cbd5e1; /* Added background color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 0px;
 `
 
 // Main title styling
@@ -64,6 +63,9 @@ export const ListItem = styled.li`
   padding: 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  color: #555;
 
   &:hover {
     transform: translateY(-3px);

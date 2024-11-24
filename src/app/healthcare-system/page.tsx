@@ -17,15 +17,15 @@ export default function HealthcareSystem() {
       <MainHeading>Healthcare System</MainHeading>
 
       <Paragraph>
-        <Highlight>PM Billing</Highlight> provides a variety of customized medical billing solutions designed to meet the specific needs of your healthcare system. Our services include seamless billing, accounts receivable (AR) recovery, and error reduction, ensuring quicker payments tailored to your requirements.
+        PM Billing provides a variety of customized medical billing solutions designed to meet the specific needs of your healthcare system. Our services include seamless billing, accounts receivable (AR) recovery, and error reduction, ensuring quicker payments tailored to your requirements.
       </Paragraph>
 
       <Paragraph>
-        An inefficient billing process can significantly harm your financial health. Outsourcing your billing or revenue cycle management can be a smart solution, allowing you to streamline the entire process at a lower cost. Partnering with PM Billing enables you to address your healthcare challenges effectively.
+      We provides a variety of customized medical billing solutions designed to meet the specific needs of your healthcare system. Our services include seamless billing, accounts receivable (AR) recovery, and error reduction, ensuring quicker payments tailored to your requirements.
       </Paragraph>
 
       <Paragraph>
-        We help maintain an efficient payment and expense tracking system, potentially increasing your reimbursements by over 25%. Our comprehensive services include revenue cycle management, AR recovery, medical records review, in-patient DRG review, credentialing, and prior authorization services.
+      We help maintain an efficient payment and expense tracking system, potentially increasing your reimbursements by over 25%. Our comprehensive services include revenue cycle management, AR recovery, medical records review, in-patient DRG review, credentialing, and prior authorization services.
       </Paragraph>
 
       <SubHeading>Medical Billing Services PM Billing Offers</SubHeading>
@@ -35,7 +35,7 @@ export default function HealthcareSystem() {
           <Card><strong>Patient Registration:</strong> Collect patient demographics and insurance information, and record them into the billing software with up to a 99% accuracy rate.</Card>
         </ListItem>
         <ListItem>
-          <Card><strong>Insurance Verification:</strong> Verify the insurance eligibility and benefits before submitting claims to avoid any delays in reimbursement.</Card>
+          <Card><strong>Insurance Verification:</strong> Verify the insurance eligibility and benefits before submitting claims to avoid any delays in reimbursement.          </Card>
         </ListItem>
         <ListItem>
           <Card><strong>Charge Entry:</strong> Enter the provided services for the specific date of service with accurate coding and CPT codes, after verifying correct coding.</Card>

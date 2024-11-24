@@ -2,15 +2,14 @@ import styled from 'styled-components'
 
 // Global container
 export const PageContainer = styled.div`
-  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #cbd5e1; /* Added background color */
+  background-color: #cbd5e1;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 0px;
 `
 
 // Main title styling
@@ -52,9 +51,27 @@ export const Paragraph = styled.p`
 export const List = styled.ul`
   margin-left: 1.5rem;
   margin-bottom: 2rem;
+  padding-left: 1rem;
+  color: #555;
 `
 
 // List item styling
 export const ListItem = styled.li`
   margin-bottom: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  position: relative;
+
+  &::before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: -0.5rem;
+  }
 `
+

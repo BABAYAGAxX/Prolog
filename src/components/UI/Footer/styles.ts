@@ -2,7 +2,7 @@
 import { styled } from 'styled-components';
 
 export const Wrapper = styled.footer`
-  padding-bottom: 3.5rem;
+  padding-bottom: 0.001rem; /* Reduced padding */
   background-color: #000000;
 `;
 
@@ -12,37 +12,42 @@ export const Inner = styled.main`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 3.75rem;
+  gap: 3rem; /* Adjusted gap for a more compact layout */
 
   @media (max-width: 768px) {
-    gap: 2.5rem;
+    gap: 2.25rem;
   }
 `;
 
 export const FooterMainContent = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 3.75rem 0 3.25rem;
+  padding: 3rem 0 1rem; /* Reduced padding for a shorter height */
   border-top: 0.0625rem solid #3d3d3d;
-  gap: 3.25rem;
+  gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    padding: 2.5rem 0 2.2rem;
+    gap: 2.25rem;
+  }
 `;
 
 export const FooterMiddle = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: 2rem;
+  gap: 1.8rem; /* Slightly reduced */
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 3.5rem;
+    gap: 3rem;
   }
 `;
 
 export const ImageContainer = styled.div`
   width: 100%;
   max-width: 400px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem; /* Slightly reduced margin */
 
   @media (max-width: 768px) {
     max-width: 100%;
@@ -52,7 +57,7 @@ export const ImageContainer = styled.div`
 export const FooterNavigation = styled.div`
   display: flex;
   justify-content: flex-end;
-  gap: 2rem;
+  gap: 1.8rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -62,14 +67,14 @@ export const FooterNavigation = styled.div`
 
 export const GridColumn = styled.div`
   display: flex;
-  min-width: 12.5rem;
+  min-width: 12rem;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.8rem; /* Adjusted spacing for compactness */
 
   h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
   }
 
   @media (max-width: 768px) {
@@ -81,7 +86,7 @@ export const LinksContainer = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.65rem;
 
   li {
     color: #efefef;
@@ -126,7 +131,7 @@ export const FooterBottom = styled.div`
 export const Translator = styled.div`
   display: flex;
   align-items: center;
-  gap: 1.12rem;
+  gap: 1rem;
   cursor: pointer;
 
   h3 {

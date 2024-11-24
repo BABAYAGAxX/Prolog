@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 // Global container
 export const PageContainer = styled.div`
-  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
@@ -10,7 +9,7 @@ export const PageContainer = styled.div`
   color: #333;
   background-color: #f5f7fa;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 0; /* No rounded corners */
 `;
 
 // Main title styling
@@ -63,7 +62,7 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   margin-bottom: 1rem;
   background: white;
-  border-radius: 8px;
+  border-radius: 0; /* No rounded corners */
   padding: 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -83,7 +82,7 @@ export const ContactButton = styled.button`
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 0; /* No rounded corners */
   transition: background-color 0.3s ease;
 
   &:hover {

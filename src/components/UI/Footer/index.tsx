@@ -18,7 +18,7 @@ const linksArr = [
     links: [
       {name: 'Contact us', href: '/contact-us'}, 
       {name: 'Phone Number', href: 'tel:+1234567890'},
-      {name: 'Email', href: 'mailto:info@pmbilling.com'}
+      {name: 'PMbilling786@gmail.com', href: 'mailto:PMbilling786@gmail.com'}
     ],
   },
 ];
@@ -70,7 +70,7 @@ const Footer = () => {
               <h3>English (United States)</h3>
             </Translator>
             <CopyRight>
-              PM Billing.
+              PM Billing
             </CopyRight>
           </FooterBottom>
         </FooterMainContent>
