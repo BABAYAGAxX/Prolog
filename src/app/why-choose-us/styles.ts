@@ -9,7 +9,6 @@ export const PageContainer = styled.div`
   color: #333;
   background-color: #cbd5e1; /* Added background color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 0px;
 `
 
 // Subheading styling

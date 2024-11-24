@@ -9,7 +9,6 @@ export const PageContainer = styled.div`
   color: #333;
   background-color: #f5f7fa;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 0; /* No rounded corners */
 `;
 
 // Main title styling
