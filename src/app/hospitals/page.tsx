@@ -15,7 +15,7 @@ export default function Hospitals() {
       <MainHeading>Hospitals</MainHeading>
 
       <Paragraph>
-      PM Billing boasts a professional team that provides hassle-free hospital billing services, eliminating costly errors and ensuring faster payments tailored to your healthcare organization's unique needs.
+      PM Billing boasts a professional team that provides hassle-free hospital billing services, eliminating costly errors and ensuring faster payments tailored to your healthcare organization&apos;s unique needs.
       </Paragraph>
       
       <Paragraph>
@@ -48,7 +48,7 @@ export default function Hospitals() {
 
       <SubHeading>PM Billing Hospital Revenue Cycle Management Process</SubHeading>
       <Paragraph>
-        Hospital Revenue Cycle Management (RCM) is a comprehensive process that starts with the patient's appointment and ends with the healthcare provider receiving all payments. As a leading RCM service provider, we deliver high-quality hospital billing services through a systematic and efficient approach. Key steps include:
+        Hospital Revenue Cycle Management (RCM) is a comprehensive process that starts with the patient&apos;s appointment and ends with the healthcare provider receiving all payments. As a leading RCM service provider, we deliver high-quality hospital billing services through a systematic and efficient approach. Key steps include:
       </Paragraph>
 
       <List>
@@ -65,14 +65,14 @@ export default function Hospitals() {
         <ListItem>Refunds</ListItem>
       </List>
 
-      <SubHeading>RCM Software's PM Billing Supports</SubHeading>
+      <SubHeading>RCM Software&apos;s PM Billing Supports</SubHeading>
       <Paragraph>
       Modern medical billing software is crucial for efficient billing and administrative procedures. Our team has expertise in various tools and technologies for hospital billing, including CollaborateMD, Office Ally, eClinicalWorks, NextGen, AdvancedMD, and ClaimFusion.
       </Paragraph>
 
       <SubHeading>Why Choose PM Billing for Hospital Billing Services</SubHeading>
       <Paragraph>
-      PM Billing offers a comprehensive range of medical billing solutions tailored to your healthcare organization's needs. We have experience working with various healthcare facilities, including:
+      PM Billing offers a comprehensive range of medical billing solutions tailored to your healthcare organization&apos;s needs. We have experience working with various healthcare facilities, including:
       </Paragraph>
 
       <List>

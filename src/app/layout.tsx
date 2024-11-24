@@ -4,7 +4,7 @@ import getMetadata from "@/lib/seo";
 import Layout from '@/components/Layout';
 
 
-const inter = Onest({ subsets: ["latin"] });
+// const inter = Onest({ subsets: ["latin"] });
 
 export const metadata = getMetadata({});
 export default function RootLayout({
