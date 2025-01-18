@@ -1,78 +1,40 @@
-import styled from 'styled-components'
+import { type ReactNode } from "react"
+import { type Variants } from "framer-motion"
 
-// Global container
-export const PageContainer = styled.div`
-  margin: 0 auto;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-  line-height: 1.8;
-  color: #333;
-  background-color: #cbd5e1; /* Added background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-`
+export interface SectionProps {
+  title: string
+  children: ReactNode
+  className?: string
+}
 
-// Main title styling
-export const MainHeading = styled.h1`
-  font-size: 3rem;
-  color: #2c3e50;
-  margin-bottom: 2rem;
-  text-align: center;
-  border-bottom: 3px solid #3498db;
-  padding-bottom: 1rem;
-  transition: color 0.3s;
+// Enhanced animation variants
+export const fadeInUp: Variants = {
+  initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8, ease: "easeOut" }, // Corrected transition type
+}
 
-  &:hover {
-    color: #3498db;
-  }
-`
+export const fadeIn: Variants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 1.2, ease: "easeOut" }, // Corrected transition type
+}
 
-// Subheading styling
-export const SubHeading = styled.h2`
-  font-size: 2rem;
-  color: #34495e;
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
-  text-align: left;
-  border-left: 4px solid #3498db;
-  padding-left: 1rem;
-`
+export const staggeredFadeIn = (index: number): Variants => ({
+  initial: { opacity: 0, x: -20 },
+  animate: { opacity: 1, x: 0 },
+  transition: { delay: index * 0.5, duration: 0.5, ease: "easeOut" }, // Increased delay to 0.5 seconds
+})
 
-// Paragraph styling
-export const Paragraph = styled.p`
-  margin-bottom: 1.5rem;
-  line-height: 1.8;
-  color: #555;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-`
+// Added new animation for headings
+export const revealText: Variants = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8, ease: "easeOut", delay: 0.2 }, // Corrected transition type
+}
 
-// Highlighted text
-export const Highlight = styled.span`
-  font-weight: bold;
-  color: #27ae60;
-`
+export const colors = {
+  darkTeal: "#00474f",
+  lightTeal: "#006d77",
+} as const
 
-// List styling
-export const List = styled.ul`
-  margin-left: 2rem;
-  margin-bottom: 2rem;
-`
-
-// List item styling
-export const ListItem = styled.li`
-  margin-bottom: 1rem;
-`
-
-// Card-like container for each list item
-export const Card = styled.div`
-  background: white;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s;
-  cursor: default; /* Ensures the default cursor is used */
-
-  &:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  }
-`

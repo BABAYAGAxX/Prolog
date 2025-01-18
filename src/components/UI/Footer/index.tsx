@@ -1,5 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import {
+  Wrapper,
+  Inner,
+  FooterMainContent,
+  FooterMiddle,
+  ImageContainer,
+  FooterNavigation,
+  GridColumn,
+  LinksContainer,
+  FooterBottom,
+  CopyRight,
+  ContactBox
+} from './styles';
 
 const linksArr = [
   {
@@ -17,25 +30,11 @@ const linksArr = [
     title: 'About us',
     links: [
       {name: 'Contact us', href: '/contact-us'}, 
-      {name: 'Phone Number', href: 'tel:+1234567890'},
-      {name: 'PMbilling786@gmail.com', href: 'mailto:PMbilling786@gmail.com'}
+      {name: '+1(866)-886-5697', href: 'tel:+18668865697'},
+      {name: 'sardar@pmbilling.us', href: 'mailto:sardar@pmbilling.us'}
     ],
   },
 ];
-
-import {
-  Wrapper,
-  Inner,
-  FooterMainContent,
-  FooterMiddle,
-  ImageContainer,
-  FooterNavigation,
-  GridColumn,
-  LinksContainer,
-  FooterBottom,
-  Translator,
-  CopyRight,
-} from './styles';
 
 const Footer = () => {
   return (
@@ -44,8 +43,20 @@ const Footer = () => {
         <FooterMainContent>
           <FooterMiddle>
             <ImageContainer>
-              <Image src="/images/PM-Footer.png" width={500} height={300} alt='PM BILLING LOGO'/>
+              <Image src="/images/PM-Footer-1.png" width={500} height={300} alt='PM BILLING LOGO'/>
             </ImageContainer>
+            <ContactBox>
+              <h2>Contact Us TODAY!!!</h2>
+              <p>
+                Contact PM Billing today at +1(866)-886-5697 for your consultation. There are 
+                multiple advantages to allowing us to become a part of your team. We will help you increase 
+                your cash and patient flow while also helping you to streamline your work. Our team is more 
+                than just a billing company. Contact us to learn more about how we can help you.
+              </p>
+              <button>
+                Schedule An Appointment
+              </button>
+            </ContactBox>
             <FooterNavigation>
               {linksArr.map((l, i) => (
                 <GridColumn key={i}>
@@ -66,11 +77,8 @@ const Footer = () => {
             </FooterNavigation>
           </FooterMiddle>
           <FooterBottom>
-            <Translator>
-              <h3>English (United States)</h3>
-            </Translator>
             <CopyRight>
-              PM Billing
+              PM Billing - All Rights Reserved
             </CopyRight>
           </FooterBottom>
         </FooterMainContent>
@@ -80,3 +88,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

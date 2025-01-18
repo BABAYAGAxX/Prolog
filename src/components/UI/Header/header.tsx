@@ -84,9 +84,12 @@ const Header = () => {
             <Link href="/why-choose-us" className="text-muted-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">
               Why Choose Us
             </Link>
-            <Link href="/contact-us" className="text-muted-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">
-              Contact Us
-            </Link>
+            <button 
+              onClick={() => window.location.href = 'mailto:PMbilling786@gmail.com'}
+              className="connect-button"
+            >
+              Let's Connect
+            </button>
           </div>
         </div>
       </div>
@@ -125,9 +128,12 @@ const Header = () => {
             <Link href="/why-choose-us" className="text-muted-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium">
               Why Choose Us
             </Link>
-            <Link href="/contact" className="text-muted-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium">
-              Contact Us
-            </Link>
+            <button 
+              onClick={() => window.location.href = 'mailto:PMbilling786@gmail.com'}
+              className="connect-button w-full text-left px-3 py-2"
+            >
+              Let's Connect
+            </button>
           </div>
         </div>
       )}
@@ -136,3 +142,4 @@ const Header = () => {
 };
 
 export default Header;
+
