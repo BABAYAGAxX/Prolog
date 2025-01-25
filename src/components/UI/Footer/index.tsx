@@ -18,9 +18,9 @@ const linksArr = [
   {
     title: 'Services',
     links: [
-      { name: 'Healthcare Systems', href: '/services/healthcare-systems' },
+      { name: 'Healthcare Systems', href: '/services/healthcare-system' },
       { name: 'Hospitals', href: '/services/hospitals' },
-      { name: 'Nursing Home', href: '/services/nursing-home' },
+      { name: 'Nursing Home', href: '/services/nursing-homes' },
       { name: 'Emergency Rooms', href: '/services/emergency-rooms' },
       { name: 'Private Practices', href: '/services/private-practices' },
       { name: 'All Specialties', href: '/services/all-specialties' },
@@ -29,9 +29,9 @@ const linksArr = [
   {
     title: 'About us',
     links: [
-      {name: 'Contact us', href: '/contact-us'}, 
+      {name: 'Contact us', href: '/vserve@pmbilling.us'}, 
       {name: '+1(866)-886-5697', href: 'tel:+18668865697'},
-      {name: 'sardar@pmbilling.us', href: 'mailto:sardar@pmbilling.us'}
+      {name: 'vserve@pmbilling.us', href: 'mailto:vserve@pmbilling.us'}
     ],
   },
 ];
@@ -48,8 +48,7 @@ const Footer = () => {
             <ContactBox>
               <h2>Contact Us TODAY!!!</h2>
               <p>
-                Contact PM Billing today at +1(866)-886-5697 for your consultation. There are 
-                multiple advantages to allowing us to become a part of your team. We will help you increase 
+                Contact PM Billing today at +1(866)-886-5697 for your consultation. We will help you increase 
                 your cash and patient flow while also helping you to streamline your work. Our team is more 
                 than just a billing company. Contact us to learn more about how we can help you.
               </p>

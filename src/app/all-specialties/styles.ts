@@ -1,78 +1,79 @@
-import styled from 'styled-components';
+import { type ReactNode } from "react";
+import { type Variants } from "framer-motion";
+import { LucideIcon } from 'lucide-react';
 
-// Global container
-export const PageContainer = styled.div`
+// Types
+export interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+}
 
-  margin: 0 auto;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f5f7fa;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-`;
+export interface SectionProps {
+  title: string;
+  children: ReactNode;
+  className?: string;
+}
 
-// Main title styling
-export const MainHeading = styled.h1`
-  font-size: 3rem;
-  color: #2c3e50;
-  margin-bottom: 2rem;
-  text-align: center;
-  border-bottom: 3px solid #3498db;
-  padding-bottom: 1rem;
-  transition: color 0.3s;
-  cursor: default; /* Ensure default cursor */
+export interface ServiceCardProps {
+  icon: LucideIcon;
+  text: string;
+}
 
-  &:hover {
-    color: #3498db;
-  }
-`;
+export interface Service {
+  icon: LucideIcon;
+  text: string;
+}
 
-// Subheading styling
-export const SubHeading = styled.h2`
-  font-size: 2rem;
-  color: #34495e;
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
-  text-align: left;
-  border-left: 4px solid #3498db;
-  padding-left: 1rem;
-  cursor: default; /* Ensure default cursor */
-`;
+export interface SidebarService {
+  name: string;
+  href: string;
+}
 
-// Paragraph styling
-export const Paragraph = styled.p`
-  margin-bottom: 1.5rem;
-  line-height: 1.8;
-  color: #555;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-  cursor: default; /* Ensure default cursor */
-`;
+// Animation Variants
+export const fadeInUp: Variants = {
+  initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8, ease: "easeOut" },
+};
 
-// List styling
-export const List = styled.ul`
-  margin-left: 0;
-  margin-bottom: 2rem;
-  padding-left: 0;
-  list-style-type: none;
-`;
+export const fadeIn: Variants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 1.2, ease: "easeOut" },
+};
 
-// List item styling
-export const ListItem = styled.li`
-  margin-bottom: 1rem;
-  background: white;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-  color: #555;
-  cursor: default; /* Ensure default cursor */
+export const staggeredFadeIn = (index: number): Variants => ({
+  initial: { opacity: 0, x: -20 },
+  animate: { opacity: 1, x: 0 },
+  transition: { delay: index * 0.2, duration: 0.5, ease: "easeOut" },
+});
 
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-`;
+export const revealText: Variants = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+};
+
+// Colors
+export const colors = {
+  darkTeal: "#00474f",
+  lightTeal: "#006d77",
+} as const;
+
+// Styles
+export const styles = {
+  section: "py-[2rem]",
+  sectionTitle: "text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8",
+  servicesGrid: "grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto",
+  card: "group hover:shadow-lg transition-all duration-300",
+  cardContent: "p-6 flex items-start space-x-4",
+  iconWrapper: "p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300",
+  icon: "w-6 h-6 text-primary",
+  serviceText: "text-lg leading-relaxed",
+  mainContent: "space-y-12",
+  heroSection: "relative h-[20vh] flex items-center justify-center bg-gradient-to-b from-[#00474f]/10 to-white",
+  sidebar: "w-80 bg-gray-50/50 p-8 rounded-lg",
+  sidebarList: "space-y-6",
+  mainLayout: "max-w-[1400px] mx-auto px-4 md:px-8",
+  gridLayout: "grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12"
+} as const;

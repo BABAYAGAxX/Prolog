@@ -66,12 +66,12 @@ export const HeroTextContainer = styled.div`
     font-weight: 400;
     line-height: 4rem;
     letter-spacing: -0.1rem;
-    color: #000000; /*Black */
+    color: #00474f;
   }
 
   p {
     max-width: 41.75rem;
-    color: #6b6b6b; /*muted text color */
+    color: #006d77; /*muted text color */
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 2rem;

@@ -29,7 +29,7 @@ const Header = () => {
           {/* Business Name and Logo */}
           <div className="flex-shrink-0 flex gap-2 items-center">
             <Image 
-              src= "/images/PM-Billing-nbg.png"
+              src="/images/PM-Billing-nbg.png"
               alt="PM Billing Logo" 
               width={40} 
               height={40} 
@@ -86,7 +86,8 @@ const Header = () => {
             </Link>
             <button 
               onClick={() => window.location.href = 'mailto:PMbilling786@gmail.com'}
-              className="connect-button"
+              className="bg-green-300 text-white px-6 py-3 rounded-full font-medium text-base 
+                         hover:bg-green-600 transition-colors duration-300 ease-in-out"
             >
               Let's Connect
             </button>
@@ -129,8 +130,9 @@ const Header = () => {
               Why Choose Us
             </Link>
             <button 
-              onClick={() => window.location.href = 'mailto:PMbilling786@gmail.com'}
-              className="connect-button w-full text-left px-3 py-2"
+              onClick={() => window.location.href = 'mailto:vserve@pmbilling.us'}
+              className="bg-green-300 text-white w-full text-left px-6 py-3 rounded-full font-medium text-base 
+                         hover:bg-green-600 transition-colors duration-300 ease-in-out"
             >
               Let's Connect
             </button>
@@ -142,4 +144,3 @@ const Header = () => {
 };
 
 export default Header;
-
