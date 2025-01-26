@@ -11,7 +11,7 @@ import {
   Building2, 
   Heart 
 } from "lucide-react";
-import { styles, colors, fadeIn, fadeInUp, staggeredFadeIn, revealText, type CardProps, type ServiceCardProps, type Service, type SidebarService, type SectionProps } from './styles';
+import { styles, colors, fadeIn, staggeredFadeIn, revealText, type CardProps, type ServiceCardProps, type Service, type SidebarService, type SectionProps } from './styles';
 
 // Card Components
 const Card: React.FC<CardProps> = ({ children, className = "" }) => (
@@ -32,7 +32,7 @@ const Section: React.FC<SectionProps> = ({ title, children, className = "" }) =>
     initial="initial"
     whileInView="animate"
     viewport={{ once: true, margin: "-100px" }}
-    variants={fadeInUp}
+    variants={fadeIn}
     className={`${styles.section} ${className}`}
   >
     <motion.h2
@@ -43,7 +43,7 @@ const Section: React.FC<SectionProps> = ({ title, children, className = "" }) =>
       {title}
     </motion.h2>
     <motion.div
-      variants={fadeInUp}
+      variants={fadeIn}
       style={{ color: colors.lightTeal }}
       className="space-y-4 sm:space-y-6"
     >
@@ -54,7 +54,7 @@ const Section: React.FC<SectionProps> = ({ title, children, className = "" }) =>
 
 // Service Card Component
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, text }) => (
-  <motion.div variants={fadeInUp}>
+  <motion.div variants={fadeIn}>
     <Card className="group">
       <CardContent className="flex items-start space-x-4">
         <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
@@ -135,7 +135,7 @@ export default function Page() {
             className="text-2xl sm:text-3xl md:text-4xl font-bold"
             style={{ color: colors.darkTeal }}
           >
-            Our Services
+            All Specialties
           </motion.h1>
         </div>
       </motion.section>
@@ -199,6 +199,10 @@ export default function Page() {
                 ))}
               </div>
             </Section>
+
+            <div className="flex justify-center">
+              <img src="/images/Hospitals.png" alt="Hospital Services" className="max-w-full h-auto rounded-lg shadow-lg" />
+            </div>
 
             <Section title="Your Specialty, Our Expertise">
               <p className="text-base sm:text-lg">

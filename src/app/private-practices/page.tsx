@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { type SectionProps, fadeIn, fadeInUp, staggeredFadeIn, revealText, colors } from "./styles"
+import { type SectionProps, fadeIn, staggeredFadeIn, revealText, colors } from "./styles"
 
 function Section({ title, children, className = "" }: SectionProps) {
   return (
@@ -10,7 +10,7 @@ function Section({ title, children, className = "" }: SectionProps) {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
-      variants={fadeInUp}
+      variants={fadeIn}
       className={`py-[2rem] ${className}`}
     >
       <motion.h2
@@ -21,7 +21,7 @@ function Section({ title, children, className = "" }: SectionProps) {
         {title}
       </motion.h2>
       <motion.div
-        variants={fadeInUp}
+        variants={fadeIn}
         style={{ color: colors.lightTeal }}
         className="space-y-4 sm:space-y-6"
       >
@@ -33,12 +33,12 @@ function Section({ title, children, className = "" }: SectionProps) {
 
 function ServicesSidebar() {
   const services = [
-    { name: "Healthcare Systems", href: "/healthcare-systems" },
+    { name: "Healthcare Systems", href: "/healthcare-system" },
     { name: "Hospitals", href: "/hospitals" },
     { name: "Nursing Homes", href: "/nursing-homes" },
     { name: "Emergency Rooms", href: "/emergency-rooms" },
     { name: "Private Practices", href: "/private-practices" },
-    { name: "All Specialties", href: "/specialties" }
+    { name: "All Specialties", href: "/all-specialties" }
   ]
 
   return (
@@ -119,7 +119,7 @@ export default function Page() {
               </p>
               
               <p className="text-base sm:text-lg">
-                PM Billing keeps you updated on the latest coding practices and compliance requirements. Incorrect coding can lead to lost revenue, but with our expertise, you'll be informed of the most effective codes and best practices to optimize your revenue.
+                PM Billing keeps you updated on the latest coding practices and compliance requirements. Incorrect coding can lead to lost revenue, but with our expertise, you&apos;ll be informed of the most effective codes and best practices to optimize your revenue.
               </p>
               
               <p className="text-base sm:text-lg">
@@ -134,7 +134,7 @@ export default function Page() {
             {/* Contact Section */}
             <Section title="Contact PM Billing for Private Practice Billing">
               <p className="text-base sm:text-lg">
-                Switching to PM Billing offers numerous advantages. Our strong industry relationships and unmatched service quality in medical billing can help you boost cash flow and improve patient flow. Let us streamline your billing processes and provide the insights you need to enhance your practice's financial health.
+                Switching to PM Billing offers numerous advantages. Our strong industry relationships and unmatched service quality in medical billing can help you boost cash flow and improve patient flow. Let us streamline your billing processes and provide the insights you need to enhance your practice&apos;s financial health.
               </p>
             </Section>
           </div>

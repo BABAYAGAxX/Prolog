@@ -11,7 +11,7 @@ import {
   Building2, 
   Heart 
 } from "lucide-react";
-import { styles, colors, fadeIn, fadeInUp, staggeredFadeIn, revealText, type CardProps, type ServiceCardProps, type Service, type SidebarService, type SectionProps } from './styles';
+import { styles, colors, fadeIn, staggeredFadeIn, revealText, type CardProps, type ServiceCardProps, type Service, type SidebarService, type SectionProps } from './styles';
 
 // Card Components
 const Card: React.FC<CardProps> = ({ children, className = "" }) => (
@@ -32,7 +32,7 @@ const Section: React.FC<SectionProps> = ({ title, children, className = "" }) =>
     initial="initial"
     whileInView="animate"
     viewport={{ once: true, margin: "-100px" }}
-    variants={fadeInUp}
+    variants={fadeIn}
     className={`${styles.section} ${className}`}
   >
     <motion.h2
@@ -43,7 +43,7 @@ const Section: React.FC<SectionProps> = ({ title, children, className = "" }) =>
       {title}
     </motion.h2>
     <motion.div
-      variants={fadeInUp}
+      variants={fadeIn}
       style={{ color: colors.lightTeal }}
       className="space-y-4 sm:space-y-6"
     >

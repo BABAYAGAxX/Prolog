@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { type SectionProps, fadeIn, fadeInUp, staggeredFadeIn, revealText, colors, listItemAnimation } from "./styles"
+import { type SectionProps, fadeIn, staggeredFadeIn, revealText, colors, listItemAnimation } from "./styles"
 
 function Section({ title, children, className = "" }: SectionProps) {
   return (
@@ -10,7 +10,7 @@ function Section({ title, children, className = "" }: SectionProps) {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
-      variants={fadeInUp}
+      variants={fadeIn}
       className={`py-[2rem] ${className}`}
     >
       <motion.h2
@@ -21,7 +21,7 @@ function Section({ title, children, className = "" }: SectionProps) {
         {title}
       </motion.h2>
       <motion.div
-        variants={fadeInUp}
+        variants={fadeIn}
         style={{ color: colors.lightTeal }}
         className="space-y-4 sm:space-y-6"
       >
@@ -100,7 +100,7 @@ export default function Page() {
             {/* Hospital Services Section */}
             <Section title="Hospital Billing Services">
               <p className="text-base sm:text-lg">
-                PM Billing boasts a professional team that provides hassle-free hospital billing services, eliminating costly errors and ensuring faster payments tailored to your healthcare organization's unique needs.
+                PM Billing boasts a professional team that provides hassle-free hospital billing services, eliminating costly errors and ensuring faster payments tailored to your healthcare organization&apos;s unique needs.
               </p>
               <p className="text-base sm:text-lg">
                 Are your finances suffering due to outstanding accounts receivables?
@@ -152,7 +152,7 @@ export default function Page() {
             {/* Hospital Revenue Cycle Management Process Section */}
             <Section title="PM Billing Hospital Revenue Cycle Management Process">
               <p className="text-base sm:text-lg">
-                Hospital Revenue Cycle Management (RCM) is a comprehensive process that starts with the patient's appointment and ends with the healthcare provider receiving all payments. As a leading RCM service provider, we deliver high-quality hospital billing services through a systematic and efficient approach. Key steps include:
+                Hospital Revenue Cycle Management (RCM) is a comprehensive process that starts with the patient&apos;s appointment and ends with the healthcare provider receiving all payments. As a leading RCM service provider, we deliver high-quality hospital billing services through a systematic and efficient approach. Key steps include:
               </p>
               <ul className="space-y-4 sm:space-y-6">
                 {[
@@ -193,7 +193,7 @@ export default function Page() {
             {/* Why Choose PM Billing Section */}
             <Section title="Why Choose PM Billing for Hospital Billing Services">
               <p className="text-base sm:text-lg">
-                PM Billing offers a comprehensive range of medical billing solutions tailored to your healthcare organization's needs. We have experience working with various healthcare facilities, including:
+                PM Billing offers a comprehensive range of medical billing solutions tailored to your healthcare organization&apos;s needs. We have experience working with various healthcare facilities, including:
               </p>
               <ul className="space-y-4 sm:space-y-6">
                 {[

@@ -16,7 +16,7 @@ const Header = () => {
   const serviceLinks = [
     { href: "/healthcare-system", label: "Healthcare System" },
     { href: "/hospitals", label: "Hospitals" },
-    { href: "/nursing-home", label: "Nursing Home" },
+    { href: "/nursing-homes", label: "Nursing Home" },
     { href: "/emergency-rooms", label: "Emergency Rooms" },
     { href: "/private-practices", label: "Private Practices" },
     { href: "/all-specialties", label: "All Specialties" },
@@ -89,7 +89,7 @@ const Header = () => {
               className="bg-green-300 text-white px-6 py-3 rounded-full font-medium text-base 
                          hover:bg-green-600 transition-colors duration-300 ease-in-out"
             >
-              Let's Connect
+              Let&apos;s Connect
             </button>
           </div>
         </div>
@@ -134,7 +134,7 @@ const Header = () => {
               className="bg-green-300 text-white w-full text-left px-6 py-3 rounded-full font-medium text-base 
                          hover:bg-green-600 transition-colors duration-300 ease-in-out"
             >
-              Let's Connect
+              Let&apos;s Connect
             </button>
           </div>
         </div>

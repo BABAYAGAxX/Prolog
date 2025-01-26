@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { type SectionProps, fadeIn, fadeInUp, staggeredFadeIn, revealText, colors } from "./styles"
+import { type SectionProps, fadeIn, staggeredFadeIn, revealText, colors } from "./styles"
 
 function Section({ title, children, className = "" }: SectionProps) {
   return (
@@ -10,7 +10,7 @@ function Section({ title, children, className = "" }: SectionProps) {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
-      variants={fadeInUp}
+      variants={fadeIn}
       className={`py-[2rem] ${className}`}
     >
       <motion.h2
@@ -21,7 +21,7 @@ function Section({ title, children, className = "" }: SectionProps) {
         {title}
       </motion.h2>
       <motion.div
-        variants={fadeInUp}
+        variants={fadeIn}
         style={{ color: colors.lightTeal }}
         className="space-y-4 sm:space-y-6"
       >
@@ -89,7 +89,7 @@ export default function Page() {
             className="text-2xl sm:text-3xl md:text-4xl font-bold"
             style={{ color: colors.darkTeal }}
           >
-            Our Services
+            Healthcare Systems
           </motion.h1>
         </div>
       </motion.section>

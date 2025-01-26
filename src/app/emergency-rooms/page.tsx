@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import {
   type SectionProps,
   fadeIn,
-  fadeInUp,
   staggeredFadeIn,
   revealText,
   colors,
@@ -17,7 +16,7 @@ function Section({ title, children, className = "" }: SectionProps) {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: "-100px" }}
-      variants={fadeInUp}
+      variants={fadeIn}
       className={`py-[2rem] ${className}`}
     >
       <motion.h2
@@ -28,7 +27,7 @@ function Section({ title, children, className = "" }: SectionProps) {
         {title}
       </motion.h2>
       <motion.div
-        variants={fadeInUp}
+        variants={fadeIn}
         style={{ color: colors.lightTeal }}
         className="space-y-4 sm:space-y-6"
       >
