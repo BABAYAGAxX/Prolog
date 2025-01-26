@@ -33,12 +33,12 @@ function Section({ title, children, className = "" }: SectionProps) {
 
 function ServicesSidebar() {
   const services = [
-    { name: "Healthcare Systems", href: "/healthcare-systems" },
+    { name: "Healthcare Systems", href: "/healthcare-system" },
     { name: "Hospitals", href: "/hospitals" },
     { name: "Nursing Homes", href: "/nursing-homes" },
     { name: "Emergency Rooms", href: "/emergency-rooms" },
     { name: "Private Practices", href: "/private-practices" },
-    { name: "All Specialties", href: "/specialties" }
+    { name: "All Specialties", href: "/all-specialties" }
   ]
 
   return (

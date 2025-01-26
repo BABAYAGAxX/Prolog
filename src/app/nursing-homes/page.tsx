@@ -34,7 +34,7 @@ function ServicesSidebar() {
   const services = [
     { name: "Healthcare Systems", href: "/healthcare-system" },
     { name: "Hospitals", href: "/hospitals" },
-    { name: "Nursing Homes", href: "/nursing-home" },
+    { name: "Nursing Homes", href: "/nursing-homes" },
     { name: "Emergency Rooms", href: "/emergency-rooms" },
     { name: "Private Practices", href: "/private-practices" },
     { name: "All Specialties", href: "/all-specialties" }

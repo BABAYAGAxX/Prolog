@@ -27,9 +27,8 @@ const linksArr = [
     ],
   },
   {
-    title: 'About us',
+    title: 'Contact Us',
     links: [
-      {name: 'Contact us', href: '/vserve@pmbilling.us'}, 
       {name: '+1(866)-886-5697', href: 'tel:+18668865697'},
       {name: 'vserve@pmbilling.us', href: 'mailto:vserve@pmbilling.us'}
     ],
@@ -47,15 +46,17 @@ const Footer = () => {
             </ImageContainer>
             <ContactBox>
               <h2>Contact Us TODAY!!!</h2>
-              <p>
-                Contact PM Billing today at +1(866)-886-5697 for your consultation. We will help you increase 
-                your cash and patient flow while also helping you to streamline your work. Our team is more 
-                than just a billing company. Contact us to learn more about how we can help you.
-              </p>
-              <button>
-                Schedule An Appointment
+                <p>
+                  Contact PM Billing today at +1(866)-886-5697 for your consultation. We will help you increase 
+                  your cash and patient flow while also helping you to streamline your work. Our team is more 
+                    than just a billing company. Contact us to learn more about how we can help you.
+                </p>
+              <button 
+                onClick={() => window.location.href = 'mailto:vserve@pmbilling.us?subject=Schedule%20Consultation'}
+              >
+                  Schedule An Appointment
               </button>
-            </ContactBox>
+</ContactBox>
             <FooterNavigation>
               {linksArr.map((l, i) => (
                 <GridColumn key={i}>
