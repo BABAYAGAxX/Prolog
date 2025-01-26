@@ -18,12 +18,12 @@ const linksArr = [
   {
     title: 'Services',
     links: [
-      { name: 'Healthcare Systems', href: '/services/healthcare-system' },
-      { name: 'Hospitals', href: '/services/hospitals' },
-      { name: 'Nursing Home', href: '/services/nursing-homes' },
-      { name: 'Emergency Rooms', href: '/services/emergency-rooms' },
-      { name: 'Private Practices', href: '/services/private-practices' },
-      { name: 'All Specialties', href: '/services/all-specialties' },
+      { name: 'Healthcare Systems', href: '/healthcare-system' },
+      { name: 'Hospitals', href: '/hospitals' },
+      { name: 'Nursing Home', href: '/nursing-homes' },
+      { name: 'Emergency Rooms', href: '/emergency-rooms' },
+      { name: 'Private Practices', href: '/private-practices' },
+      { name: 'All Specialties', href: '/all-specialties' },
     ],
   },
   {
