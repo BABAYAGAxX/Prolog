@@ -1,6 +1,4 @@
-/* Header.css */
-
-/* Base styles for the header */
+/* Header Background */
 .bg-muted {
   background-color: #f4f4f5;
 }
@@ -9,12 +7,12 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Logo and business name styles */
+/* General Text Color */
 .text-muted-foreground {
-  color: #71717a;
+  color: #00474f; /* Updated to new color */
 }
 
-/* Navigation link styles */
+/* Navigation Link Styles */
 .text-sm {
   font-size: 0.875rem;
 }
@@ -23,6 +21,7 @@
   font-weight: 500;
 }
 
+/* Hover Effects */
 .hover\:text-primary:hover {
   color: #3b82f6;
 }
@@ -33,7 +32,7 @@
   transition-duration: 300ms;
 }
 
-/* Popover styles */
+/* Popover Styles */
 .bg-muted {
   background-color: #f4f4f5;
 }
@@ -50,12 +49,12 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Popover item styles */
+/* Popover Item Styles */
 .hover\:bg-muted-foreground\/10:hover {
   background-color: rgba(113, 113, 122, 0.1);
 }
 
-/* Mobile menu styles */
+/* Mobile Menu Styles */
 .md\:hidden {
   display: none;
 }
@@ -66,16 +65,16 @@
   }
 }
 
-/* Button styles */
+/* Button Styles */
 .text-muted-foreground {
-  color: #71717a;
+  color: #00474f; /* Updated to new color */
 }
 
 .hover\:text-primary:hover {
   color: #3b82f6;
 }
 
-/* Transition for chevron icon */
+/* Transition for Chevron Icon */
 .transition-transform {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -84,4 +83,9 @@
 
 .rotate-180 {
   transform: rotate(180deg);
+}
+
+/* Special Styling for "Let's Connect" */
+.lets-connect {
+  color: #3b82f6 !important; /* Keep it blue or adjust to a preferred color */
 }
