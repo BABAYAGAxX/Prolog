@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import React from 'react';
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion"; // Normal import
 import Link from "next/link";
 import { 
   Calculator, 
@@ -11,9 +11,9 @@ import {
   Building2, 
   Heart 
 } from "lucide-react";
-import { styles, colors, fadeIn, staggeredFadeIn, revealText, type CardProps, type ServiceCardProps, type Service, type SidebarService, type SectionProps } from './styles';
+import { styles, colors, fadeIn, staggeredFadeIn, revealText, type CardProps, type SectionProps } from "./styles";
 
-// Card Components
+// Card Component
 const Card: React.FC<CardProps> = ({ children, className = "" }) => (
   <div className={`bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ${className}`}>
     {children}
@@ -35,18 +35,10 @@ const Section: React.FC<SectionProps> = ({ title, children, className = "" }) =>
     variants={fadeIn}
     className={`${styles.section} ${className}`}
   >
-    <motion.h2
-      variants={revealText}
-      className={styles.sectionTitle}
-      style={{ color: colors.darkTeal }}
-    >
+    <motion.h2 variants={revealText} className={styles.sectionTitle} style={{ color: colors.darkTeal }}>
       {title}
     </motion.h2>
-    <motion.div
-      variants={fadeIn}
-      style={{ color: colors.lightTeal }}
-      className="space-y-4 sm:space-y-6"
-    >
+    <motion.div variants={fadeIn} style={{ color: colors.lightTeal }} className="space-y-4 sm:space-y-6">
       {children}
     </motion.div>
   </motion.section>
@@ -55,12 +47,7 @@ const Section: React.FC<SectionProps> = ({ title, children, className = "" }) =>
 // Sidebar Component
 function ServicesSidebar() {
   return (
-    <motion.div 
-      initial="initial"
-      animate="animate"
-      variants={fadeIn}
-      className={styles.sidebar}
-    >
+    <motion.div initial="initial" animate="animate" variants={fadeIn} className={styles.sidebar}>
       <h2 className="text-2xl font-bold mb-8" style={{ color: colors.darkTeal }}>
         Services
       </h2>
@@ -79,11 +66,7 @@ function ServicesSidebar() {
             className="text-base hover:text-purple-700 transition-colors flex items-center space-x-2"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-current"/>
-            <Link 
-              href={service.href}
-              className="hover:underline"
-              style={{ color: colors.lightTeal }}
-            >
+            <Link href={service.href} className="hover:underline" style={{ color: colors.lightTeal }}>
               {service.name}
             </Link>
           </motion.li>
@@ -95,24 +78,23 @@ function ServicesSidebar() {
 
 // Main Page Component
 export default function Page() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
-      <motion.section
-        initial="initial"
-        animate="animate"
-        variants={fadeIn}
-        className={styles.heroSection}
-      >
-        <div className="text-center">
-          <motion.h1
-            variants={revealText}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold"
-            style={{ color: colors.darkTeal }}
-          >
-            WHY CHOOSE US?
-          </motion.h1>
-        </div>
-      </motion.section>
+      {isClient && ( // Prevents rendering motion elements during SSR
+        <motion.section initial="initial" animate="animate" variants={fadeIn} className={styles.heroSection}>
+          <div className="text-center">
+            <motion.h1 variants={revealText} className="text-2xl sm:text-3xl md:text-4xl font-bold" style={{ color: colors.darkTeal }}>
+              WHY CHOOSE US?
+            </motion.h1>
+          </div>
+        </motion.section>
+      )}
 
       <div className={styles.mainLayout}>
         <div className={styles.gridLayout}>
@@ -136,26 +118,15 @@ export default function Page() {
                     whileInView="animate"
                     viewport={{ once: true }}
                     variants={{
-                      initial: { 
-                        opacity: 0, 
-                        scale: 0.9,
-                        y: 20 
-                      },
+                      initial: { opacity: 0, scale: 0.9, y: 20 },
                       animate: { 
                         opacity: 1, 
                         scale: 1,
                         y: 0,
-                        transition: {
-                          duration: 0.5,
-                          ease: "easeOut",
-                          delay: index * 0.1
-                        }
+                        transition: { duration: 0.5, ease: "easeOut", delay: index * 0.1 }
                       }
                     }}
-                    whileHover={{ 
-                      scale: 1.05,
-                      transition: { duration: 0.2 }
-                    }}
+                    whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                     className="bg-[#00474f]/5 hover:bg-[#00474f]/10 
                       p-4 rounded-lg 
                       flex items-center justify-center 
